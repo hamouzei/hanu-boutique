@@ -8,3 +8,5 @@ export {
   Eyebrow,
   Quote,
 } from './Typography';
+export { default as ProductCard } from './ProductCard';
+
