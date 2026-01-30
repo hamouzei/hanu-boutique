@@ -121,6 +121,16 @@ export const ALL_PRODUCTS: Product[] = [
   },
 ];
 
+// Product categories
+export const CATEGORIES = [
+  'Evening Wear',
+  'Outerwear',
+  'Bottoms',
+  'Tops',
+  'Special Pieces',
+] as const;
+
+
 // Lookbook items
 export const LOOKBOOK_ITEMS: LookbookItem[] = [
   {
