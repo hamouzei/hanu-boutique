@@ -1,20 +1,18 @@
-import Hero from "@/components/sections/Hero";
+import { Hero, BrandStatement } from "@/components/sections";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[var(--color-cream)]">
       <Hero />
+      <BrandStatement />
       
       {/* 
         Remaining Homepage Sections will be added here:
-        - BrandStatement
         - FeaturedCollection
         - LookbookTeaser
         - CTA
       */}
-      
-      {/* Placeholder to enable scrolling for testing Navbar effect */}
-      <section className="h-[100vh]" />
     </main>
   );
 }
+
