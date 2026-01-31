@@ -92,6 +92,19 @@ export const FEATURED_PRODUCTS: Product[] = [
   },
 ];
 
+// Product categories
+export const CATEGORIES = [
+  'Evening Wear',
+  'Outerwear',
+  'Bottoms',
+  'Tops',
+  'Special Pieces',
+  'Perfumes',
+  'Sunglasses',
+  'Shoes',
+  'Cosmetics',
+] as const;
+
 // All products (including featured)
 export const ALL_PRODUCTS: Product[] = [
   ...FEATURED_PRODUCTS,
@@ -119,16 +132,55 @@ export const ALL_PRODUCTS: Product[] = [
     featured: false,
     new: false,
   },
+  {
+    id: '7',
+    name: 'Essence de Nuit',
+    slug: 'essence-de-nuit',
+    price: 245,
+    description: 'An intimate blend of midnight jasmine, sandalwood, and a hint of spice. This fragrance captures the mystery and sophistication of the night.',
+    shortDescription: 'Atmospheric jasmine and sandalwood scent',
+    images: ['https://images.unsplash.com/photo-1541604193435-22287d32c2c2'],
+    category: 'Perfumes',
+    featured: false,
+    new: true,
+  },
+  {
+    id: '8',
+    name: 'Aviator Noir',
+    slug: 'aviator-noir',
+    price: 420,
+    description: 'Classic aviator frames reimagined with a modern, high-contrast finish. Sharp edges and premium lenses for the confident minimalist.',
+    shortDescription: 'Modern aviators with sharp geometry',
+    images: ['https://images.unsplash.com/photo-1572635196237-14b3f281503f'],
+    category: 'Sunglasses',
+    featured: false,
+    new: true,
+  },
+  {
+    id: '9',
+    name: 'Infinite Heel',
+    slug: 'infinite-heel',
+    price: 1200,
+    description: 'A study in architectural form and material craftsmanship. These heels feature a unique silhouette designed for both comfort and visual impact.',
+    shortDescription: 'Architectural silhouette with texture emphasis',
+    images: ['https://images.unsplash.com/photo-1543163521-1bf539c55dd2'],
+    category: 'Shoes',
+    featured: false,
+    new: true,
+  },
+  {
+    id: '10',
+    name: 'Luminous Lip Silk',
+    slug: 'luminous-lip-silk',
+    price: 55,
+    description: 'A hydrating silk-infused lip treatment that provides a subtle, natural glow. Soft tones for an understated, elegant look.',
+    shortDescription: 'Hydrating silk-infused lip treatment',
+    images: ['https://images.unsplash.com/photo-1586790170083-2f9ceadc732d'],
+    category: 'Cosmetics',
+    featured: false,
+    new: true,
+  },
 ];
-
-// Product categories
-export const CATEGORIES = [
-  'Evening Wear',
-  'Outerwear',
-  'Bottoms',
-  'Tops',
-  'Special Pieces',
-] as const;
 
 
 // Lookbook items

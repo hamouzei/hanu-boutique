@@ -1,12 +1,29 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useSearchParams } from 'next/navigation';
 import { ALL_PRODUCTS, CATEGORIES, Product } from '@/lib/data';
 import { ProductCard } from '@/components/ui';
 
 export default function CollectionGrid() {
+  const searchParams = useSearchParams();
   const [activeCategory, setActiveCategory] = useState<string>('All');
+
+  // Handle category from URL search params
+  useEffect(() => {
+    const categoryParam = searchParams.get('category');
+    if (categoryParam) {
+      // Find matching category (case-insensitive or slug-based)
+      const matchedCategory = CATEGORIES.find(
+        (c) => c.toLowerCase() === categoryParam.toLowerCase() || 
+               c.toLowerCase().replace(/\s+/g, '-') === categoryParam.toLowerCase()
+      );
+      if (matchedCategory) {
+        setActiveCategory(matchedCategory);
+      }
+    }
+  }, [searchParams]);
 
   const filteredProducts = useMemo(() => {
     if (activeCategory === 'All') return ALL_PRODUCTS;

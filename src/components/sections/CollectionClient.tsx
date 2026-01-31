@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { motion } from 'framer-motion';
 import { CollectionGrid } from '@/components/sections';
 import { HeadingSerif, BodyText } from '@/components/ui';
@@ -26,7 +27,9 @@ export default function CollectionClient() {
           </motion.div>
         </header>
 
-        <CollectionGrid />
+        <React.Suspense fallback={<div className="h-64 flex items-center justify-center font-serif italic opacity-50">Loading Collection...</div>}>
+          <CollectionGrid />
+        </React.Suspense>
       </div>
     </main>
   );
