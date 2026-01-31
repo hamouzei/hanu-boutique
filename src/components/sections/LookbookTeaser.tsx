@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { HeadingSection, Button } from '@/components/ui';
@@ -25,8 +26,13 @@ export default function LookbookTeaser() {
         style={{ y }}
         className="absolute inset-0 z-0 h-[120%] -top-[10%]"
       >
-        {/* Placeholder for editorial image */}
-        <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center grayscale opacity-60 transition-all duration-1000" />
+        <Image
+          src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d"
+          alt="Editorial fashion lookbook teaser"
+          fill
+          className="object-cover grayscale opacity-60 transition-all duration-1000"
+          priority
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-black)]/40 via-transparent to-[var(--color-black)]/60" />
       </motion.div>
 

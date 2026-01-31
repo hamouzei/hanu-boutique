@@ -23,9 +23,12 @@ export default function LookbookGallery() {
         >
           {/* Image Container */}
           <div className={`${item.alignment === 'center' ? 'w-full max-w-5xl' : 'w-full md:w-3/5'} aspect-[16/10] relative overflow-hidden bg-[var(--color-charcoal)]`}>
-            {/* Placeholder for editorial image */}
-            <div className={`w-full h-full bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out scale-105 hover:scale-100`}
-                 style={{ backgroundImage: `url('https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=2071&auto=format&fit=crop')` }}
+            <Image
+              src={`https://images.unsplash.com/photo-${index === 0 ? '1445205170230-053b83016050' : index === 1 ? '1469334031218-e382a71b716b' : '1539109136881-3be0616acf4b'}`}
+              alt={item.title}
+              fill
+              className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out scale-105 hover:scale-100"
+              sizes="(max-width: 768px) 100vw, 60vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-black)]/20 to-transparent" />
           </div>

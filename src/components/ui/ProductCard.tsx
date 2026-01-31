@@ -29,11 +29,19 @@ export default function ProductCard({ product, index }: ProductCardProps) {
         <div className="w-full h-full relative transition-transform duration-1000 ease-[var(--transition-slow)] group-hover:scale-110">
           {/* Using a placeholder if actual images are missing, but following documentation plan */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[var(--color-black)]/20 z-10" />
-          {/* Note: In a real app, product.images[0] would be used. 
-              Since we don't have real images yet, we use a stylized placeholder or expectation. */}
-          <div className="w-full h-full flex items-center justify-center bg-[var(--color-cream)]/10 text-[var(--color-gold)] font-serif text-xl border border-[var(--color-gold)]/20">
-            {product.name}
-          </div>
+          {product.images?.[0] ? (
+            <Image
+              src={product.images[0]}
+              alt={product.name}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center bg-[var(--color-cream)]/10 text-[var(--color-gold)] font-serif text-xl border border-[var(--color-gold)]/20">
+              {product.name}
+            </div>
+          )}
         </div>
 
         {/* Info Reveal from Bottom */}
