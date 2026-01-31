@@ -5,5 +5,6 @@ export { default as LookbookTeaser } from './LookbookTeaser';
 export { default as CTA } from './CTA';
 export { default as CollectionGrid } from './CollectionGrid';
 export { default as LookbookGallery } from './LookbookGallery';
+export { default as BrandValues } from './BrandValues';
 
 
