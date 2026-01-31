@@ -9,5 +9,6 @@ export { default as BrandValues } from './BrandValues';
 export { default as PerfumesSection } from './PerfumesSection';
 export { default as SunglassesSection } from './SunglassesSection';
 export { default as ShoesSection } from './ShoesSection';
+export { default as CosmeticsSection } from './CosmeticsSection';
 
 
