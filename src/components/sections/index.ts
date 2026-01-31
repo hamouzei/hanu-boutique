@@ -8,5 +8,6 @@ export { default as LookbookGallery } from './LookbookGallery';
 export { default as BrandValues } from './BrandValues';
 export { default as PerfumesSection } from './PerfumesSection';
 export { default as SunglassesSection } from './SunglassesSection';
+export { default as ShoesSection } from './ShoesSection';
 
 

@@ -1,4 +1,4 @@
-import { Hero, BrandStatement, FeaturedCollection, LookbookTeaser, CTA, PerfumesSection, SunglassesSection } from "@/components/sections";
+import { Hero, BrandStatement, FeaturedCollection, LookbookTeaser, CTA, PerfumesSection, SunglassesSection, ShoesSection } from "@/components/sections";
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
       <LookbookTeaser />
       <PerfumesSection />
       <SunglassesSection />
+      <ShoesSection />
       <CTA />
     </main>
   );
