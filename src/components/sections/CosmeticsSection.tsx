@@ -1,10 +1,41 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { HeadingSerif, BodyText, Button } from '@/components/ui';
 
+interface Item {
+  id: number;
+  imageUrl: string;
+  categoryName: string;
+}
+
 export default function CosmeticsSection() {
+  const [featuredImage, setFeaturedImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchFeaturedCosmetic = async () => {
+      try {
+        const response = await fetch('/api/items');
+        const data = await response.json();
+        
+        // Get first featured cosmetic image
+        const cosmetic = data.find((item: Item) => 
+          item.categoryName === 'Cosmetics' && (item as any).featured === 1
+        );
+        
+        if (cosmetic) {
+          setFeaturedImage(cosmetic.imageUrl);
+        }
+      } catch (error) {
+        console.error('Failed to fetch featured cosmetic:', error);
+      }
+    };
+
+    fetchFeaturedCosmetic();
+  }, []);
+
   return (
     <section className="relative py-24 md:py-32 bg-white overflow-hidden">
       <div className="container-luxury">
@@ -29,7 +60,7 @@ export default function CosmeticsSection() {
               />
             </motion.div>
 
-            {/* Elegant cosmetic bottle using CSS */}
+            {/* Featured cosmetic or CSS bottle */}
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -37,25 +68,28 @@ export default function CosmeticsSection() {
               viewport={{ once: true }}
               className="relative aspect-[3/4] flex items-center justify-center bg-gradient-to-br from-gray-50 to-white"
             >
-              {/* Cosmetic bottle design */}
-              <div className="relative">
-                {/* Bottle body */}
-                <div className="w-20 h-56 bg-gradient-to-b from-gray-900 to-black rounded-lg shadow-2xl relative">
-                  {/* Gold cap */}
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-8 bg-gradient-to-b from-[var(--color-gold)] to-amber-700 rounded-t-lg shadow-lg" />
-                  
-                  {/* Label area */}
-                  <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-16 h-20 flex items-center justify-center">
-                    <div className="w-full h-px bg-white/20" />
+              {featuredImage ? (
+                // Show featured product image
+                <Image
+                  src={featuredImage}
+                  alt="Featured Cosmetic"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                />
+              ) : (
+                // Fallback: Cosmetic bottle design
+                <div className="relative">
+                  <div className="w-20 h-56 bg-gradient-to-b from-gray-900 to-black rounded-lg shadow-2xl relative">
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-8 bg-gradient-to-b from-[var(--color-gold)] to-amber-700 rounded-t-lg shadow-lg" />
+                    <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-16 h-20 flex items-center justify-center">
+                      <div className="w-full h-px bg-white/20" />
+                    </div>
+                    <div className="absolute top-8 left-2 w-1 h-32 bg-white/30 blur-sm" />
                   </div>
-                  
-                  {/* Light reflection */}
-                  <div className="absolute top-8 left-2 w-1 h-32 bg-white/30 blur-sm" />
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[var(--color-gold-light)]/20 blur-[60px] rounded-full -z-10" />
                 </div>
-                
-                {/* Soft glow */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[var(--color-gold-light)]/20 blur-[60px] rounded-full -z-10" />
-              </div>
+              )}
             </motion.div>
           </div>
 
@@ -86,7 +120,6 @@ export default function CosmeticsSection() {
               <span className="inline-block transition-transform group-hover:translate-x-1 ml-2">→</span>
             </Button>
           </motion.div>
-
         </div>
       </div>
     </section>

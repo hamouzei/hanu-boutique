@@ -1,10 +1,41 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { HeadingSerif, HeadingSection, BodyText, Button } from '@/components/ui';
 
+interface Item {
+  id: number;
+  imageUrl: string;
+  categoryName: string;
+}
+
 export default function SunglassesSection() {
+  const [featuredImage, setFeaturedImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchFeaturedSunglasses = async () => {
+      try {
+        const response = await fetch('/api/items');
+        const data = await response.json();
+        
+        // Get first featured sunglasses image
+        const sunglasses = data.find((item: Item) => 
+          item.categoryName === 'Sunglasses' && (item as any).featured === 1
+        );
+        
+        if (sunglasses) {
+          setFeaturedImage(sunglasses.imageUrl);
+        }
+      } catch (error) {
+        console.error('Failed to fetch featured sunglasses:', error);
+      }
+    };
+
+    fetchFeaturedSunglasses();
+  }, []);
+
   return (
     <section className="bg-white py-24 md:py-32 overflow-hidden">
       <div className="container-luxury">
@@ -46,8 +77,8 @@ export default function SunglassesSection() {
             {/* Main Visual Container */}
             <div className="aspect-[4/5] relative bg-[var(--color-cream-dark)] overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1572635196237-14b3f281503f"
-                alt="Luxury black aviator sunglasses with sharp geometric highlights"
+                src={featuredImage || "https://images.unsplash.com/photo-1572635196237-14b3f281503f"}
+                alt="Luxury sunglasses"
                 fill
                 className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
                 sizes="(max-width: 1024px) 100vw, 50vw"
