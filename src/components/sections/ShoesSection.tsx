@@ -1,54 +1,7 @@
 'use client';
 
-import { Canvas, useFrame } from '@react-three/fiber';
-import { Float, MeshDistortMaterial, Environment, ContactShadows, PresentationControls } from '@react-three/drei';
-import { useRef, Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { HeadingSerif, BodyText, Button } from '@/components/ui';
-import * as THREE from 'three';
-
-function ShoeSculpture() {
-  const groupRef = useRef<THREE.Group>(null);
-
-  useFrame((state) => {
-    if (!groupRef.current) return;
-    const t = state.clock.getElapsedTime();
-    groupRef.current.rotation.y = t * 0.2;
-  });
-
-  return (
-    <group ref={groupRef} rotation={[0.4, 0, 0]}>
-      <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
-        {/* Abstract "Heel" Form */}
-        <mesh position={[0, 0.5, 0]}>
-          <boxGeometry args={[0.5, 2.5, 0.5]} />
-          <meshStandardMaterial color="#2a2a2a" roughness={0.1} metalness={0.8} />
-        </mesh>
-        
-        {/* Footbed/Sole Shape */}
-        <mesh position={[0.5, -0.5, 0]} rotation={[0, 0, Math.PI / 4]}>
-          <capsuleGeometry args={[0.4, 2, 32, 32]} />
-          <meshStandardMaterial color="#1a1a1a" roughness={0.3} metalness={0.2} />
-        </mesh>
-
-        {/* Glossy Accents */}
-        <mesh position={[1.2, -1.2, 0.2]}>
-          <sphereGeometry args={[0.2, 32, 32]} />
-          <meshStandardMaterial color="#C9A962" metalness={1} roughness={0} />
-        </mesh>
-      </Float>
-      
-      <Environment preset="city" />
-      <ContactShadows 
-        position={[0, -2, 0]} 
-        opacity={0.6} 
-        scale={10} 
-        blur={2.5} 
-        far={4} 
-      />
-    </group>
-  );
-}
 
 const MATERIAL_HIGHLIGHTS = [
   { title: "Italian Calfskin", desc: "Sourced from historic tanneries in Tuscany." },
@@ -62,30 +15,37 @@ export default function ShoesSection() {
       <div className="container-luxury">
         <div className="flex flex-col lg:flex-row gap-20 items-center">
           
-          {/* Visual Side (3/4 angle sculpture) */}
+          {/* Visual Side */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
             viewport={{ once: true }}
-            className="flex-1 w-full h-[500px] lg:h-[700px] relative order-2 lg:order-1"
+            className="flex-1 w-full h-[500px] lg:h-[700px] relative order-2 lg:order-1 flex items-center justify-center"
           >
+            {/* Background glow */}
             <div className="absolute inset-0 z-0 bg-white/30 rounded-full blur-[120px] opacity-50 translate-y-10" />
             
-            <Suspense fallback={<div className="w-full h-full flex items-center justify-center font-serif italic opacity-30">Sculpting form...</div>}>
-              <Canvas camera={{ position: [0, 0, 7], fov: 35 }}>
-                <ambientLight intensity={0.5} />
-                <spotLight position={[5, 10, 5]} angle={0.15} penumbra={1} intensity={1} />
-                <PresentationControls
-                  global
-                  rotation={[0, 0.3, 0]}
-                  polar={[-Math.PI / 3, Math.PI / 3]}
-                  azimuth={[-Math.PI / 1.4, Math.PI / 1.4]}
-                >
-                  <ShoeSculpture />
-                </PresentationControls>
-              </Canvas>
-            </Suspense>
+            {/* Elegant shoe silhouette using CSS */}
+            <div className="relative z-10">
+              <div className="relative w-80 h-80 flex items-center justify-center">
+                {/* Heel */}
+                <div className="absolute left-1/4 bottom-1/3 w-12 h-32 bg-gradient-to-b from-gray-800 to-black rounded-sm transform -rotate-12 shadow-2xl">
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-[var(--color-gold)] rounded-full" />
+                </div>
+                
+                {/* Sole/footbed */}
+                <div className="absolute bottom-1/3 left-1/3 w-48 h-24 bg-gradient-to-r from-black/90 to-gray-800 rounded-full transform rotate-12 shadow-2xl" />
+                
+                {/* Upper part */}
+                <div className="absolute top-1/3 left-1/3 w-40 h-32 bg-gradient-to-br from-gray-700 to-black/90 rounded-3xl transform -rotate-6 shadow-xl">
+                  <div className="absolute top-4 right-4 w-6 h-6 bg-[var(--color-gold)] rounded-full opacity-80" />
+                </div>
+
+                {/* Decorative gold accent */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-[var(--color-gold)]/10 blur-2xl rounded-full animate-pulse" />
+              </div>
+            </div>
           </motion.div>
 
           {/* Content Side */}
