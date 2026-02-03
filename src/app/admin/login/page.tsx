@@ -53,7 +53,7 @@ function LoginForm() {
       <div>
         <label 
           htmlFor="email" 
-          className="block font-sans text-xs tracking-[0.15em] uppercase text-gray-600 mb-2"
+          className="block font-sans text-xs tracking-[0.15em] uppercase text-white/40 mb-2"
         >
           Email
         </label>
@@ -63,7 +63,7 @@ function LoginForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="w-full px-4 py-3 border border-gray-200 focus:border-[var(--color-gold)] focus:outline-none transition-colors bg-transparent"
+          className="w-full px-4 py-3 border border-white/10 focus:border-[var(--color-gold)] focus:outline-none transition-colors bg-white/5 text-white placeholder:text-white/20"
           placeholder="admin@example.com"
         />
       </div>
@@ -71,7 +71,7 @@ function LoginForm() {
       <div>
         <label 
           htmlFor="password" 
-          className="block font-sans text-xs tracking-[0.15em] uppercase text-gray-600 mb-2"
+          className="block font-sans text-xs tracking-[0.15em] uppercase text-white/40 mb-2"
         >
           Password
         </label>
@@ -81,7 +81,7 @@ function LoginForm() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-          className="w-full px-4 py-3 border border-gray-200 focus:border-[var(--color-gold)] focus:outline-none transition-colors bg-transparent"
+          className="w-full px-4 py-3 border border-white/10 focus:border-[var(--color-gold)] focus:outline-none transition-colors bg-white/5 text-white placeholder:text-white/20"
           placeholder="••••••••"
         />
       </div>
@@ -89,7 +89,7 @@ function LoginForm() {
       <button
         type="submit"
         disabled={isLoading}
-        className="w-full py-4 bg-[var(--color-black)] text-white font-sans text-xs tracking-[0.2em] uppercase hover:bg-[var(--color-charcoal)] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full py-4 bg-[var(--color-gold)] text-[var(--color-black)] font-sans text-xs tracking-[0.2em] uppercase hover:bg-[var(--color-sandwarm)] transition-colors disabled:opacity-30 disabled:cursor-not-allowed font-bold"
       >
         {isLoading ? 'Signing in...' : 'Sign In'}
       </button>
@@ -99,20 +99,20 @@ function LoginForm() {
 
 export default function AdminLogin() {
   return (
-    <main className="min-h-screen bg-[var(--color-cream)] flex items-center justify-center p-4">
+    <main className="min-h-screen bg-[var(--color-smoked-stone)] flex items-center justify-center p-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         className="w-full max-w-md"
       >
-        <div className="bg-white p-8 md:p-12 shadow-sm border border-[var(--color-gold)]/10">
+        <div className="bg-white/5 backdrop-blur-sm p-8 md:p-12 border border-white/10">
           {/* Header */}
           <div className="text-center mb-10">
-            <h1 className="font-serif text-3xl md:text-4xl text-[var(--color-black)] mb-2">
+            <h1 className="font-serif text-3xl md:text-4xl text-white mb-2">
               ATELIER
             </h1>
-            <p className="font-sans text-xs tracking-[0.3em] uppercase text-gray-500">
+            <p className="font-sans text-xs tracking-[0.3em] uppercase text-white/40">
               Admin Portal
             </p>
           </div>
@@ -126,7 +126,7 @@ export default function AdminLogin() {
           <div className="mt-8 text-center">
             <a 
               href="/" 
-              className="font-sans text-xs tracking-[0.1em] text-gray-400 hover:text-[var(--color-gold)] transition-colors"
+              className="font-sans text-xs tracking-[0.1em] text-white/20 hover:text-[var(--color-gold)] transition-colors"
             >
               ← Back to Website
             </a>

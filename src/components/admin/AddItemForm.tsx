@@ -88,8 +88,8 @@ export default function AddItemForm({ onItemAdded }: AddItemFormProps) {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-      <h2 className="font-serif text-xl mb-6">Add New Item</h2>
+    <div className="bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 p-6">
+      <h2 className="font-serif text-xl mb-6 text-white">Add New Item</h2>
       
       {error && (
         <div className="mb-4 bg-red-50 border border-red-200 text-red-700 px-4 py-3 text-sm rounded">
@@ -106,14 +106,14 @@ export default function AddItemForm({ onItemAdded }: AddItemFormProps) {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Category */}
         <div>
-          <label className="block text-xs tracking-wider uppercase text-gray-600 mb-2">
+          <label className="block text-xs tracking-wider uppercase text-white/40 mb-2 font-sans">
             Category *
           </label>
           <select
             value={categoryId}
             onChange={(e) => setCategoryId(e.target.value)}
             required
-            className="w-full px-4 py-3 border border-gray-200 rounded focus:border-[var(--color-gold)] focus:outline-none bg-white"
+            className="w-full px-4 py-3 border border-white/10 rounded focus:border-[var(--color-gold)] focus:outline-none bg-[var(--color-layer-a)] text-white"
           >
             <option value="">Select a category</option>
             {categories.map((cat) => (
@@ -126,7 +126,7 @@ export default function AddItemForm({ onItemAdded }: AddItemFormProps) {
 
         {/* Image Upload */}
         <div>
-          <label className="block text-xs tracking-wider uppercase text-gray-600 mb-2">
+          <label className="block text-xs tracking-wider uppercase text-white/40 mb-2 font-sans">
             Image *
           </label>
           <ImageUploader 
@@ -140,7 +140,7 @@ export default function AddItemForm({ onItemAdded }: AddItemFormProps) {
 
         {/* Name */}
         <div>
-          <label className="block text-xs tracking-wider uppercase text-gray-600 mb-2">
+          <label className="block text-xs tracking-wider uppercase text-white/40 mb-2 font-sans">
             Name *
           </label>
           <input
@@ -149,13 +149,13 @@ export default function AddItemForm({ onItemAdded }: AddItemFormProps) {
             onChange={(e) => setName(e.target.value)}
             required
             placeholder="e.g., Silk Evening Gown"
-            className="w-full px-4 py-3 border border-gray-200 rounded focus:border-[var(--color-gold)] focus:outline-none"
+            className="w-full px-4 py-3 border border-white/10 rounded focus:border-[var(--color-gold)] focus:outline-none bg-[var(--color-layer-a)] text-white placeholder:text-white/20"
           />
         </div>
 
         {/* Description */}
         <div>
-          <label className="block text-xs tracking-wider uppercase text-gray-600 mb-2">
+          <label className="block text-xs tracking-wider uppercase text-white/40 mb-2 font-sans">
             Description
           </label>
           <textarea
@@ -163,13 +163,13 @@ export default function AddItemForm({ onItemAdded }: AddItemFormProps) {
             onChange={(e) => setDescription(e.target.value)}
             rows={3}
             placeholder="A brief description of the item..."
-            className="w-full px-4 py-3 border border-gray-200 rounded focus:border-[var(--color-gold)] focus:outline-none resize-none"
+            className="w-full px-4 py-3 border border-white/10 rounded focus:border-[var(--color-gold)] focus:outline-none resize-none bg-[var(--color-layer-a)] text-white placeholder:text-white/20"
           />
         </div>
 
         {/* Price */}
         <div>
-          <label className="block text-xs tracking-wider uppercase text-gray-600 mb-2">
+          <label className="block text-xs tracking-wider uppercase text-white/40 mb-2 font-sans">
             Price
           </label>
           <div className="relative">
@@ -181,7 +181,7 @@ export default function AddItemForm({ onItemAdded }: AddItemFormProps) {
               value={price}
               onChange={(e) => setPrice(e.target.value)}
               placeholder="0.00"
-              className="w-full pl-8 pr-4 py-3 border border-gray-200 rounded focus:border-[var(--color-gold)] focus:outline-none"
+              className="w-full pl-8 pr-4 py-3 border border-white/10 rounded focus:border-[var(--color-gold)] focus:outline-none bg-[var(--color-layer-a)] text-white placeholder:text-white/20"
             />
           </div>
         </div>
@@ -195,7 +195,7 @@ export default function AddItemForm({ onItemAdded }: AddItemFormProps) {
             onChange={(e) => setFeatured(e.target.checked)}
             className="w-5 h-5 border-gray-300 rounded text-[var(--color-gold)] focus:ring-[var(--color-gold)]"
           />
-          <label htmlFor="featured" className="text-sm text-gray-700">
+          <label htmlFor="featured" className="text-sm text-white/70 font-sans">
             Feature on homepage
           </label>
         </div>
@@ -204,7 +204,7 @@ export default function AddItemForm({ onItemAdded }: AddItemFormProps) {
         <button
           type="submit"
           disabled={isLoading || !imageUrl || !categoryId || !name}
-          className="w-full py-4 bg-[var(--color-black)] text-white font-sans text-xs tracking-[0.2em] uppercase hover:bg-[var(--color-charcoal)] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full py-4 bg-[var(--color-gold)] text-[var(--color-black)] font-sans text-xs tracking-[0.2em] uppercase hover:bg-[var(--color-sandwarm)] transition-colors disabled:opacity-30 disabled:cursor-not-allowed font-bold"
         >
           {isLoading ? 'Adding...' : 'Add Item'}
         </button>

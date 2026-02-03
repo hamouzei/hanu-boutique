@@ -67,37 +67,37 @@ export default function ItemsList({ refreshTrigger }: ItemsListProps) {
 
   if (isLoading) {
     return (
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 text-center">
+      <div className="bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 p-8 text-center">
         <div className="w-8 h-8 border-2 border-[var(--color-gold)] border-t-transparent rounded-full animate-spin mx-auto" />
-        <p className="mt-4 text-gray-500 text-sm">Loading items...</p>
+        <p className="mt-4 text-white/40 text-sm font-sans uppercase tracking-wider">Loading items...</p>
       </div>
     );
   }
 
   if (items.length === 0) {
     return (
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 text-center">
-        <div className="text-gray-400 mb-2">
+      <div className="bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 p-8 text-center">
+        <div className="text-white/20 mb-4">
           <svg className="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
           </svg>
         </div>
-        <p className="text-gray-500">No items yet. Add your first item above!</p>
+        <p className="text-white/40 font-sans text-sm tracking-wide uppercase">No items yet. Add your first item above!</p>
       </div>
     );
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200">
-      <div className="px-6 py-4 border-b border-gray-200">
-        <h2 className="font-serif text-xl">All Items ({items.length})</h2>
+    <div className="bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 overflow-hidden">
+      <div className="px-6 py-4 border-b border-white/10 bg-white/5">
+        <h2 className="font-serif text-xl text-white">All Items ({items.length})</h2>
       </div>
       
-      <div className="divide-y divide-gray-100">
+      <div className="divide-y divide-white/5">
         {items.map((item) => (
-          <div key={item.id} className="flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors">
+          <div key={item.id} className="flex items-center gap-4 p-4 hover:bg-white/5 transition-colors">
             {/* Image */}
-            <div className="w-16 h-16 relative flex-shrink-0 bg-gray-100 rounded overflow-hidden">
+            <div className="w-16 h-16 relative flex-shrink-0 bg-white/5 rounded overflow-hidden border border-white/10">
               <Image
                 src={item.imageUrl}
                 alt={item.name}
@@ -110,16 +110,16 @@ export default function ItemsList({ refreshTrigger }: ItemsListProps) {
             {/* Info */}
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2">
-                <h3 className="font-medium text-gray-900 truncate">{item.name}</h3>
+                <h3 className="font-medium text-white truncate">{item.name}</h3>
                 {item.featured === 1 && (
                   <span className="text-xs bg-[var(--color-gold)]/10 text-[var(--color-gold)] px-2 py-0.5 rounded">
                     Featured
                   </span>
                 )}
               </div>
-              <p className="text-sm text-gray-500">{item.categoryName}</p>
+              <p className="text-sm text-white/40 font-sans tracking-tight">{item.categoryName}</p>
               {item.price && (
-                <p className="text-sm font-medium text-gray-700">${parseFloat(item.price).toFixed(2)}</p>
+                <p className="text-sm font-medium text-[var(--color-gold)]">${parseFloat(item.price).toFixed(2)}</p>
               )}
             </div>
             
@@ -127,7 +127,7 @@ export default function ItemsList({ refreshTrigger }: ItemsListProps) {
             <button
               onClick={() => handleDelete(item.id)}
               disabled={deletingId === item.id}
-              className="text-red-500 hover:text-red-700 hover:bg-red-50 px-3 py-2 rounded transition-colors disabled:opacity-50"
+              className="text-red-400 hover:text-red-200 hover:bg-red-500/10 px-3 py-2 rounded transition-colors disabled:opacity-50"
             >
               {deletingId === item.id ? (
                 <span className="text-xs">Deleting...</span>
