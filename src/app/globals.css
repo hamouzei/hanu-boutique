@@ -10,28 +10,28 @@
   --color-cream: #FAF7F2;
   --color-black: #0A0A0A;
   --color-gold: #C9A962;
-  
+
   /* Secondary Colors */
   --color-charcoal: #1A1A1A;
   --color-warm-gray: #8A8A8A;
   --color-soft-white: #FEFEFE;
-  
+
   /* Gold Variants */
   --color-gold-light: #D4BC7A;
   --color-gold-dark: #B89A4A;
-  
+
   /* Background & Foreground */
   --background: var(--color-cream);
   --foreground: var(--color-black);
-  
+
   /* Typography */
   --font-serif: var(--font-playfair), Georgia, serif;
   --font-sans: var(--font-inter), system-ui, sans-serif;
-  
+
   /* Spacing */
   --section-padding: clamp(4rem, 10vw, 8rem);
   --container-max: 1400px;
-  
+
   /* Animation */
   --transition-fast: 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   --transition-medium: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
@@ -73,7 +73,12 @@ body {
    TYPOGRAPHY
    ============================================ */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-serif);
   font-weight: 400;
   line-height: 1.2;
@@ -97,7 +102,6 @@ p {
   font-weight: 300;
   font-size: clamp(0.95rem, 1.5vw, 1.125rem);
   line-height: 1.8;
-  color: var(--color-charcoal);
 }
 
 /* ============================================
@@ -171,6 +175,7 @@ a:hover {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -178,9 +183,12 @@ a:hover {
 }
 
 @keyframes slowPulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.5;
   }

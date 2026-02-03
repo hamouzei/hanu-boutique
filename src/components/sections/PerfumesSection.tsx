@@ -60,7 +60,7 @@ export default function PerfumesSection() {
             <HeadingSerif className="text-white text-5xl md:text-7xl mb-8 leading-tight">
               Essence de Nuit
             </HeadingSerif>
-            <BodyText className="text-gray-400 text-lg md:text-xl max-w-md mb-12 leading-relaxed">
+            <BodyText className="text-white/70 text-lg md:text-xl max-w-md mb-12 leading-relaxed">
               An intimate blend of midnight jasmine, sandalwood, and a hint of smoke. A study in the invisible architecture of memory.
             </BodyText>
             

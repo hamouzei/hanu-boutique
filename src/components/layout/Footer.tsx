@@ -14,14 +14,14 @@ export default function Footer() {
             <Link href="/" className="font-serif text-3xl tracking-wider">
               {BRAND_INFO.name}
             </Link>
-            <p className="mt-4 text-sm leading-relaxed text-[var(--color-warm-gray)] max-w-xs">
+            <p className="mt-4 text-sm leading-relaxed text-white/60 max-w-xs">
               {BRAND_INFO.tagline}
             </p>
           </div>
 
           {/* Navigation Column */}
           <div className="md:col-span-1">
-            <h4 className="text-xs tracking-widest uppercase text-[var(--color-warm-gray)] mb-6">
+            <h4 className="text-xs tracking-widest uppercase text-white/40 mb-6">
               Explore
             </h4>
             <ul className="space-y-3">
@@ -40,7 +40,7 @@ export default function Footer() {
 
           {/* Contact Column */}
           <div className="md:col-span-1">
-            <h4 className="text-xs tracking-widest uppercase text-[var(--color-warm-gray)] mb-6">
+            <h4 className="text-xs tracking-widest uppercase text-white/40 mb-6">
               Connect
             </h4>
             <ul className="space-y-3">
@@ -63,7 +63,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <span className="text-sm text-[var(--color-warm-gray)]">
+                <span className="text-sm text-white/60">
                   {BRAND_INFO.contact.address}
                 </span>
               </li>
@@ -74,19 +74,19 @@ export default function Footer() {
         {/* Divider */}
         <div className="mt-16 pt-8 border-t border-[var(--color-charcoal)]">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-[var(--color-warm-gray)]">
+            <p className="text-xs text-white/40">
               © {currentYear} {BRAND_INFO.name}. All rights reserved.
             </p>
             <div className="flex gap-6">
               <Link
                 href="/privacy"
-                className="text-xs text-[var(--color-warm-gray)] hover:text-[var(--color-cream)] transition-colors duration-300"
+                className="text-xs text-white/40 hover:text-[var(--color-cream)] transition-colors duration-300"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
-                className="text-xs text-[var(--color-warm-gray)] hover:text-[var(--color-cream)] transition-colors duration-300"
+                className="text-xs text-white/40 hover:text-[var(--color-cream)] transition-colors duration-300"
               >
                 Terms of Service
               </Link>

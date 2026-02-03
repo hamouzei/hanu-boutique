@@ -13,7 +13,7 @@ export function HeadingSerif({
   as: Component = 'h1'
 }: TypographyProps) {
   return (
-    <Component className={`font-serif text-4xl md:text-5xl lg:text-6xl tracking-tight text-[var(--color-black)] ${className}`}>
+    <Component className={`font-serif text-4xl md:text-5xl lg:text-6xl tracking-tight ${className}`}>
       {children}
     </Component>
   );
@@ -26,7 +26,7 @@ export function HeadingSection({
   as: Component = 'h2'
 }: TypographyProps) {
   return (
-    <Component className={`font-serif text-3xl md:text-4xl tracking-tight text-[var(--color-black)] ${className}`}>
+    <Component className={`font-serif text-3xl md:text-4xl tracking-tight ${className}`}>
       {children}
     </Component>
   );
@@ -39,7 +39,7 @@ export function Subheading({
   as: Component = 'h3'
 }: TypographyProps) {
   return (
-    <Component className={`font-serif text-2xl md:text-3xl tracking-tight text-[var(--color-black)] ${className}`}>
+    <Component className={`font-serif text-2xl md:text-3xl tracking-tight ${className}`}>
       {children}
     </Component>
   );
@@ -52,7 +52,7 @@ export function BodyText({
   as: Component = 'p'
 }: TypographyProps) {
   return (
-    <Component className={`font-sans text-base leading-relaxed text-[var(--color-charcoal)] ${className}`}>
+    <Component className={`font-sans text-base leading-relaxed ${className}`}>
       {children}
     </Component>
   );
@@ -91,7 +91,7 @@ export function Quote({
   as: Component = 'blockquote'
 }: TypographyProps) {
   return (
-    <Component className={`font-serif text-xl md:text-2xl leading-relaxed italic text-[var(--color-charcoal)] ${className}`}>
+    <Component className={`font-serif text-xl md:text-2xl leading-relaxed italic ${className}`}>
       {children}
     </Component>
   );
