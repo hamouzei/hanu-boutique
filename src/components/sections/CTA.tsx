@@ -5,7 +5,7 @@ import { Button } from '@/components/ui';
 
 export default function CTA() {
   return (
-    <section className="bg-[var(--color-smoked-stone)] section-padding py-32 border-t border-white/5">
+    <section className="bg-[var(--color-layer-break)] section-padding py-32 border-t border-white/5">
       <div className="container-luxury text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

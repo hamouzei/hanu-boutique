@@ -18,7 +18,7 @@ export default function HeroMedia() {
   const y = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
   return (
-    <div ref={containerRef} className="absolute inset-0 z-0 overflow-hidden bg-black">
+    <div ref={containerRef} className="absolute inset-0 z-0 overflow-hidden bg-[var(--color-smoked-stone)]">
       <motion.div 
         style={{ scale, opacity, y }}
         className="relative w-full h-full"
@@ -35,10 +35,10 @@ export default function HeroMedia() {
         
         {/* Cinematic Overlays */}
         {/* Soft Radial Gradient for focus */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,transparent_0%,rgba(0,0,0,0.4)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,transparent_0%,var(--color-smoked-stone)_100%)] opacity-40" />
         
         {/* Depth Gradient (Bottom to Top) */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-smoked-stone)] via-[var(--color-smoked-stone)]/40 to-transparent opacity-80" />
       </motion.div>
 
       {/* Film Grain Texture Overlay */}

@@ -37,7 +37,7 @@ export default function CosmeticsSection() {
   }, []);
 
   return (
-    <section className="relative py-24 md:py-32 bg-[var(--color-smoked-stone)] overflow-hidden border-t border-white/5">
+    <section className="relative py-24 md:py-32 bg-[var(--color-layer-a)] overflow-hidden border-t border-white/5">
       <div className="container-luxury">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           

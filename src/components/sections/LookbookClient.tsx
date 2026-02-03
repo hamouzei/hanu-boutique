@@ -6,7 +6,7 @@ import { HeadingSerif, BodyText } from '@/components/ui';
 
 export default function LookbookClient() {
   return (
-    <main className="min-h-screen bg-[var(--color-cream)] pt-32 pb-20">
+    <main className="min-h-screen bg-[var(--color-smoked-stone)] pt-32 pb-20">
       <div className="container-luxury">
         <header className="mb-32 text-center max-w-3xl mx-auto">
           <motion.div

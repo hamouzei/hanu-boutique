@@ -21,6 +21,11 @@
   --color-gold-dark: #B89A4A;
   --color-sandwarm: #EFD8C0;
   --color-smoked-stone: #3F3D3C;
+  --color-deep-stone: #1A1817;
+  --color-layer-a: #464443;
+  --color-layer-b: #4C4A49;
+  --color-layer-c: #52504F;
+  --color-layer-break: #585655;
 
   /* Background & Foreground */
   --background: var(--color-smoked-stone);
@@ -49,6 +54,11 @@
   --color-charcoal: var(--color-charcoal);
   --color-sandwarm: var(--color-sandwarm);
   --color-smoked-stone: var(--color-smoked-stone);
+  --color-deep-stone: var(--color-deep-stone);
+  --color-layer-a: var(--color-layer-a);
+  --color-layer-b: var(--color-layer-b);
+  --color-layer-c: var(--color-layer-c);
+  --color-layer-break: var(--color-layer-break);
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
 }

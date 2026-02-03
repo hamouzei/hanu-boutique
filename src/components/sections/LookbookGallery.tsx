@@ -22,7 +22,7 @@ export default function LookbookGallery() {
           } gap-12 md:gap-24`}
         >
           {/* Image Container */}
-          <div className={`${item.alignment === 'center' ? 'w-full max-w-5xl' : 'w-full md:w-3/5'} aspect-[16/10] relative overflow-hidden bg-[var(--color-charcoal)]`}>
+          <div className={`${item.alignment === 'center' ? 'w-full max-w-5xl' : 'w-full md:w-3/5'} aspect-[16/10] relative overflow-hidden bg-white/5`}>
             <Image
               src={`https://images.unsplash.com/photo-${index === 0 ? '1445205170230-053b83016050' : index === 1 ? '1469334031218-e382a71b716b' : '1539109136881-3be0616acf4b'}`}
               alt={item.title}

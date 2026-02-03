@@ -6,7 +6,7 @@ import { HeadingSection, Quote } from '@/components/ui';
 
 export default function BrandStatement() {
   return (
-    <section className="bg-[var(--color-smoked-stone)] section-padding flex items-center justify-center border-t border-white/5">
+    <section className="bg-[var(--color-layer-a)] section-padding flex items-center justify-center border-t border-white/5">
       <div className="container-luxury max-w-4xl text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

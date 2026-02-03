@@ -37,7 +37,7 @@ export default function SunglassesSection() {
   }, []);
 
   return (
-    <section className="bg-[var(--color-smoked-stone)] py-24 md:py-32 overflow-hidden border-t border-white/5">
+    <section className="bg-[var(--color-layer-b)] py-24 md:py-32 overflow-hidden border-t border-white/5">
       <div className="container-luxury">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           

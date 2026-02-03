@@ -75,7 +75,7 @@ export default function FeaturedCollection() {
   }
 
   return (
-    <section className="bg-[var(--color-smoked-stone)] section-padding border-t border-white/5">
+    <section className="bg-[var(--color-layer-b)] section-padding border-t border-white/5">
       <div className="container-luxury">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <motion.div
