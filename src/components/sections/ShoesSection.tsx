@@ -52,8 +52,8 @@ export default function ShoesSection() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-            viewport={{ once: true }}
-            className="flex-1 w-full h-[500px] lg:h-[700px] relative order-2 lg:order-1 flex items-center justify-center"
+            viewport={{ once: true, amount: 0.2 }}
+            className="flex-1 w-full aspect-square lg:h-[700px] relative order-1 lg:order-1 flex items-center justify-center mb-12 lg:mb-0"
           >
             {/* Background glow */}
             <div className="absolute inset-0 z-0 bg-white/30 rounded-full blur-[120px] opacity-50 translate-y-10" />
