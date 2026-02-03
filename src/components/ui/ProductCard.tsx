@@ -45,18 +45,18 @@ export default function ProductCard({ product, index }: ProductCardProps) {
         </div>
 
         {/* Info Reveal from Bottom */}
-        <div className="absolute bottom-0 left-0 right-0 p-6 z-20 translate-y-full transition-transform duration-700 ease-[var(--transition-medium)] group-hover:translate-y-0 bg-[var(--color-cream)]/90 backdrop-blur-sm">
+        <div className="absolute bottom-0 left-0 right-0 p-6 z-20 translate-y-full transition-transform duration-700 ease-[var(--transition-medium)] group-hover:translate-y-0 bg-[var(--color-deep-stone)]/90 backdrop-blur-sm">
           <Caption className="text-[10px] text-[var(--color-gold)] mb-1 block">
             {product.category}
           </Caption>
-          <h4 className="font-serif text-lg text-[var(--color-black)] leading-tight mb-2">
+          <h4 className="font-serif text-lg text-white leading-tight mb-2">
             {product.name}
           </h4>
           <BodyText className="text-xs line-clamp-2 opacity-80 mb-4">
             {product.shortDescription}
           </BodyText>
           {product.price && (
-            <p className="font-sans text-sm tracking-widest text-[var(--color-black)]">
+            <p className="font-sans text-sm tracking-widest text-[var(--color-gold)]">
               ${product.price.toLocaleString()}
             </p>
           )}
