@@ -41,57 +41,49 @@ export default function CosmeticsSection() {
       <div className="container-luxury">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           
-          {/* Visual Pair */}
-          <div className="flex-1 w-full grid grid-cols-2 gap-4 h-[400px] md:h-[600px] relative order-2 lg:order-1">
-            {/* Beauty image */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-              viewport={{ once: true }}
-              className="relative aspect-[3/4] bg-[var(--color-cream)] overflow-hidden"
-            >
-              <Image
-                src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d"
-                alt="Intimate beauty detail"
-                fill
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
-                sizes="(max-width: 1024px) 50vw, 25vw"
-              />
-            </motion.div>
-
-            {/* Featured cosmetic or CSS bottle */}
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-              viewport={{ once: true }}
-              className="relative aspect-[3/4] flex items-center justify-center bg-gradient-to-br from-gray-50 to-white"
-            >
+          {/* Visual Area */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+            viewport={{ once: true }}
+            className="flex-1 w-full h-[500px] lg:h-[700px] relative order-2 lg:order-1 flex items-center justify-center"
+          >
+            {/* Background atmosphere/glow */}
+            <div className="absolute inset-0 z-0 bg-[var(--color-gold)]/5 rounded-full blur-[120px] opacity-50" />
+            
+            <div className="relative z-10 w-full h-full flex items-center justify-center">
               {featuredImage ? (
                 // Show featured product image
-                <Image
-                  src={featuredImage}
-                  alt="Featured Cosmetic"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 50vw, 25vw"
-                />
+                <div className="relative w-full h-[80%]">
+                  <Image
+                    src={featuredImage}
+                    alt="Featured Cosmetic"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
               ) : (
                 // Fallback: Cosmetic bottle design
                 <div className="relative">
-                  <div className="w-20 h-56 bg-gradient-to-b from-gray-900 to-black rounded-lg shadow-2xl relative">
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-8 bg-gradient-to-b from-[var(--color-gold)] to-amber-700 rounded-t-lg shadow-lg" />
-                    <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-16 h-20 flex items-center justify-center">
-                      <div className="w-full h-px bg-white/20" />
+                  <div className="w-24 h-64 bg-gradient-to-b from-gray-900 to-black rounded-lg shadow-2xl relative border border-white/10">
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-28 h-10 bg-gradient-to-b from-[var(--color-gold)] to-amber-700 rounded-t-lg shadow-lg" />
+                    <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-20 h-24 flex items-center justify-center">
+                      <div className="w-full h-px bg-white/10" />
                     </div>
-                    <div className="absolute top-8 left-2 w-1 h-32 bg-white/30 blur-sm" />
+                    <div className="absolute top-8 left-2 w-1 h-40 bg-white/20 blur-sm" />
                   </div>
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[var(--color-gold-light)]/20 blur-[60px] rounded-full -z-10" />
+                  {/* Internal glow */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[var(--color-gold)]/10 blur-[80px] rounded-full -z-10 animate-pulse" />
                 </div>
               )}
-            </motion.div>
-          </div>
+            </div>
+
+            {/* Sharp geometric element (Overlay) */}
+            <div className="absolute bottom-0 right-0 w-32 h-[1px] bg-[var(--color-gold)] opacity-30 translate-y-[-40px] translate-x-[-20px]" />
+            <div className="absolute bottom-0 right-0 h-32 w-[1px] bg-[var(--color-gold)] opacity-30 translate-y-[-20px] translate-x-[-40px]" />
+          </motion.div>
 
           {/* Content */}
           <motion.div
