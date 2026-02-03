@@ -19,6 +19,7 @@
   /* Gold Variants */
   --color-gold-light: #D4BC7A;
   --color-gold-dark: #B89A4A;
+  --color-sandwarm: #EFD8C0;
 
   /* Background & Foreground */
   --background: var(--color-cream);
@@ -45,6 +46,7 @@
   --color-cream: var(--color-cream);
   --color-gold: var(--color-gold);
   --color-charcoal: var(--color-charcoal);
+  --color-sandwarm: #EFD8C0;
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
 }

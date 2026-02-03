@@ -44,7 +44,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link 
             href="/" 
-            className="font-serif text-2xl tracking-wider text-[var(--color-black)] hover:opacity-100"
+            className="font-serif text-2xl tracking-wider !text-[#EFD8C0] hover:opacity-100"
           >
             {BRAND_INFO.name}
           </Link>
@@ -55,7 +55,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="link-underline text-sm tracking-widest uppercase text-[var(--color-charcoal)] hover:text-[var(--color-black)] transition-colors duration-300"
+                  className="link-underline text-sm tracking-widest uppercase !text-[#EFD8C0] hover:text-white transition-colors duration-300"
                 >
                   {link.label}
                 </Link>
@@ -74,20 +74,20 @@ export default function Navbar() {
                 rotate: isMobileMenuOpen ? 45 : 0,
                 y: isMobileMenuOpen ? 6 : 0,
               }}
-              className="w-6 h-[1px] bg-[var(--color-black)] block"
+              className="w-6 h-[1px] bg-[#EFD8C0] block"
             />
             <motion.span
               animate={{
                 opacity: isMobileMenuOpen ? 0 : 1,
               }}
-              className="w-6 h-[1px] bg-[var(--color-black)] block"
+              className="w-6 h-[1px] bg-[#EFD8C0] block"
             />
             <motion.span
               animate={{
                 rotate: isMobileMenuOpen ? -45 : 0,
                 y: isMobileMenuOpen ? -6 : 0,
               }}
-              className="w-6 h-[1px] bg-[var(--color-black)] block"
+              className="w-6 h-[1px] bg-[#EFD8C0] block"
             />
           </button>
         </nav>
@@ -121,7 +121,7 @@ export default function Navbar() {
                     <Link
                       href={link.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="font-serif text-3xl tracking-wide text-[var(--color-black)] hover:text-[var(--color-gold)] transition-colors duration-300"
+                      className="font-serif text-3xl tracking-wide !text-[#EFD8C0] hover:text-[var(--color-gold)] transition-colors duration-300"
                     >
                       {link.label}
                     </Link>
