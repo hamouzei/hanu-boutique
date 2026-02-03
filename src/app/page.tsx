@@ -2,7 +2,7 @@ import { Hero, BrandStatement, FeaturedCollection, LookbookTeaser, CTA, Perfumes
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[var(--color-cream)]">
+    <main className="min-h-screen bg-[var(--color-smoked-stone)]">
       <Hero />
       <BrandStatement />
       <FeaturedCollection />

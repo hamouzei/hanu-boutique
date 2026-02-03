@@ -37,7 +37,7 @@ export default function PerfumesSection() {
   }, []);
 
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-[#0a0a0a] overflow-hidden py-24">
+    <section className="relative min-h-[90vh] flex items-center bg-[var(--color-smoked-stone)] overflow-hidden py-24 border-t border-white/5">
       {/* Background Atmosphere */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-[60%] h-[60%] bg-gradient-to-bl from-amber-900/10 to-transparent blur-[120px]" />

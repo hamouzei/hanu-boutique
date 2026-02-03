@@ -37,7 +37,7 @@ export default function SunglassesSection() {
   }, []);
 
   return (
-    <section className="bg-white py-24 md:py-32 overflow-hidden">
+    <section className="bg-[var(--color-smoked-stone)] py-24 md:py-32 overflow-hidden border-t border-white/5">
       <div className="container-luxury">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           
@@ -55,7 +55,7 @@ export default function SunglassesSection() {
             <HeadingSerif className="text-5xl md:text-7xl mb-8 leading-tight">
               Aviator <br /> Noir
             </HeadingSerif>
-            <BodyText className="text-lg md:text-xl text-[var(--color-charcoal)] max-w-md mb-12 leading-relaxed">
+            <BodyText className="text-lg md:text-xl text-white/70 max-w-md mb-12 leading-relaxed">
               Classic frames reimagined with structural precision. For those who see the world through a lens of absolute clarity and refined confidence.
             </BodyText>
             

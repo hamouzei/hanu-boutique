@@ -20,7 +20,7 @@ export default function ContactForm() {
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="text-center py-20 bg-[var(--color-cream-dark)] px-8"
+        className="text-center py-20 bg-white/5 px-8"
       >
         <span className="text-4xl mb-6 block">✨</span>
         <h3 className="font-serif text-2xl mb-4">Inquiry Received</h3>

@@ -105,8 +105,8 @@ export default function CollectionGrid() {
             onClick={() => setActiveCategory(category)}
             className={`font-sans text-xs tracking-[0.3em] uppercase transition-all duration-300 py-2 border-b-2 ${
               activeCategory === category
-                ? 'text-[var(--color-black)] border-[var(--color-gold)]'
-                : 'text-[var(--color-warm-gray)] border-transparent hover:text-[var(--color-black)]'
+                ? 'text-white border-[var(--color-gold)]'
+                : 'text-white/40 border-transparent hover:text-white'
             }`}
           >
             {category}

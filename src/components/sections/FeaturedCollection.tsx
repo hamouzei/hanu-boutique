@@ -59,7 +59,7 @@ export default function FeaturedCollection() {
 
   if (isLoading) {
     return (
-      <section className="bg-[var(--color-cream)] section-padding">
+      <section className="bg-[var(--color-smoked-stone)] section-padding">
         <div className="container-luxury">
           <div className="h-64 flex items-center justify-center">
             <div className="w-8 h-8 border-2 border-[var(--color-gold)] border-t-transparent rounded-full animate-spin" />
@@ -75,7 +75,7 @@ export default function FeaturedCollection() {
   }
 
   return (
-    <section className="bg-[var(--color-cream)] section-padding">
+    <section className="bg-[var(--color-smoked-stone)] section-padding border-t border-white/5">
       <div className="container-luxury">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <motion.div

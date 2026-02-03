@@ -7,7 +7,7 @@ import ContactForm from '@/components/sections/ContactForm';
 
 export default function ContactClient() {
   return (
-    <main className="min-h-screen bg-[var(--color-cream)] pt-32 pb-20">
+    <main className="min-h-screen bg-[var(--color-smoked-stone)] pt-32 pb-20">
       <div className="container-luxury">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-start">
           
@@ -64,7 +64,7 @@ export default function ContactClient() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-            className="bg-[var(--color-cream-dark)] p-8 md:p-12 border border-[var(--color-gold)]/5"
+            className="bg-white/5 p-8 md:p-12 border border-white/5"
           >
             <HeadingSection className="mb-12 text-center text-sm uppercase tracking-widest opacity-50">
               Inquiry Form

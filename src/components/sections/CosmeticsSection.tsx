@@ -37,7 +37,7 @@ export default function CosmeticsSection() {
   }, []);
 
   return (
-    <section className="relative py-24 md:py-32 bg-white overflow-hidden">
+    <section className="relative py-24 md:py-32 bg-[var(--color-smoked-stone)] overflow-hidden border-t border-white/5">
       <div className="container-luxury">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           
@@ -107,7 +107,7 @@ export default function CosmeticsSection() {
             <HeadingSerif className="text-5xl md:text-7xl mb-8 leading-tight">
               Luminous <br /> Refinement
             </HeadingSerif>
-            <BodyText className="text-lg md:text-xl text-[var(--color-charcoal)] max-w-md mb-12 leading-relaxed italic border-l-2 border-[var(--color-gold)]/30 pl-8">
+            <BodyText className="text-lg md:text-xl text-white/70 max-w-md mb-12 leading-relaxed italic border-l-2 border-[var(--color-gold)]/30 pl-8">
               "Beauty is not about addition, but the careful preservation of light."
             </BodyText>
             

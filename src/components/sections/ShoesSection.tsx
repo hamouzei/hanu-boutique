@@ -43,7 +43,7 @@ export default function ShoesSection() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center bg-[var(--color-cream-dark)] py-24 overflow-hidden">
+    <section className="relative min-h-screen flex items-center bg-[var(--color-smoked-stone)] py-24 overflow-hidden border-t border-white/5">
       <div className="container-luxury">
         <div className="flex flex-col lg:flex-row gap-20 items-center">
           

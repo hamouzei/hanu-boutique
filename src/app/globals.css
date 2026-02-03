@@ -20,10 +20,11 @@
   --color-gold-light: #D4BC7A;
   --color-gold-dark: #B89A4A;
   --color-sandwarm: #EFD8C0;
+  --color-smoked-stone: #3F3D3C;
 
   /* Background & Foreground */
-  --background: var(--color-cream);
-  --foreground: var(--color-black);
+  --background: var(--color-smoked-stone);
+  --foreground: var(--color-cream);
 
   /* Typography */
   --font-serif: var(--font-playfair), Georgia, serif;
@@ -46,7 +47,8 @@
   --color-cream: var(--color-cream);
   --color-gold: var(--color-gold);
   --color-charcoal: var(--color-charcoal);
-  --color-sandwarm: #EFD8C0;
+  --color-sandwarm: var(--color-sandwarm);
+  --color-smoked-stone: var(--color-smoked-stone);
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
 }

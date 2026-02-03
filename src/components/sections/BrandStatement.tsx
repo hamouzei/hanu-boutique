@@ -6,7 +6,7 @@ import { HeadingSection, Quote } from '@/components/ui';
 
 export default function BrandStatement() {
   return (
-    <section className="bg-[var(--color-cream)] section-padding flex items-center justify-center">
+    <section className="bg-[var(--color-smoked-stone)] section-padding flex items-center justify-center border-t border-white/5">
       <div className="container-luxury max-w-4xl text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -21,7 +21,7 @@ export default function BrandStatement() {
             Our Philosophy
           </HeadingSection>
           
-          <Quote className="text-2xl md:text-4xl lg:text-5xl not-italic font-serif leading-tight text-[var(--color-black)]">
+          <Quote className="text-2xl md:text-4xl lg:text-5xl not-italic font-serif leading-tight text-white/90">
             {BRAND_INFO.manifesto}
           </Quote>
           

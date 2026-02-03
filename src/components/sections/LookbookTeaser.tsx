@@ -19,7 +19,7 @@ export default function LookbookTeaser() {
   return (
     <section 
       ref={containerRef}
-      className="relative h-[80vh] min-h-[600px] overflow-hidden bg-[var(--color-charcoal)]"
+      className="relative h-[80vh] min-h-[600px] overflow-hidden bg-[var(--color-smoked-stone)]"
     >
       {/* Background Image Container with Parallax */}
       <motion.div 

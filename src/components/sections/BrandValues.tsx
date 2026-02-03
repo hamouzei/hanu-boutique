@@ -6,7 +6,7 @@ import { HeadingSection, BodyText, Caption } from '@/components/ui';
 
 export default function BrandValues() {
   return (
-    <section className="bg-[var(--color-cream)] section-padding">
+    <section className="bg-[var(--color-smoked-stone)] section-padding border-t border-white/5">
       <div className="container-luxury">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 lg:gap-16">
           {BRAND_INFO.values.map((value, index) => (

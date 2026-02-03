@@ -8,7 +8,7 @@ import { BRAND_INFO } from '@/lib/data';
 
 export default function AboutClient() {
   return (
-    <main className="min-h-screen bg-[var(--color-cream)] pt-32 pb-20">
+    <main className="min-h-screen bg-[var(--color-smoked-stone)] pt-32 pb-20">
       <div className="container-luxury">
         {/* Hero Section of About Page */}
         <section className="mb-32">
@@ -51,7 +51,7 @@ export default function AboutClient() {
         </section>
 
         {/* Manifesto Section */}
-        <section className="mb-32 py-20 bg-[var(--color-cream-dark)] px-8 md:px-24">
+        <section className="mb-32 py-20 bg-black/20 px-8 md:px-24 border-y border-white/5">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ export default function AboutClient() {
             <HeadingSection className="text-sm uppercase tracking-[0.3em] opacity-50 mb-12">
               The Manifesto
             </HeadingSection>
-            <BodyText className="text-2xl md:text-3xl font-serif italic mb-12 leading-relaxed text-[var(--color-black)]">
+            <BodyText className="text-2xl md:text-3xl font-serif italic mb-12 leading-relaxed text-white/90">
               "{BRAND_INFO.manifesto}"
             </BodyText>
             <div className="w-16 h-[1px] bg-[var(--color-gold)] mx-auto" />

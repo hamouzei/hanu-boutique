@@ -5,7 +5,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[var(--color-black)] text-[var(--color-cream)]">
+    <footer className="bg-[var(--color-smoked-stone)] text-[var(--color-cream)] border-t border-white/5">
       <div className="container-luxury section-padding">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
