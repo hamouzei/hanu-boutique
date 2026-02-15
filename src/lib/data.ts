@@ -229,9 +229,9 @@ export const BRAND_INFO = {
     },
   ],
   contact: {
-    email: 'contact@atelier.com',
-    instagram: '@atelier',
-    phone: '+1 (555) 123-4567',
-    address: '123 Fashion Avenue, New York, NY 10001',
+    email: 'hanu123@gmail.com',
+    instagram: '@hanu123',
+    phone: '+251 91 112 1314',
+    address: 'Dire Dawa, Sabiyan',
   },
 };
