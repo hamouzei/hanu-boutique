@@ -43,7 +43,7 @@ export default function HeroCopy({ activeSlide }: HeroCopyProps) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ 
-              duration: 1.2, 
+              duration: 1.5, 
               ease: [0.22, 1, 0.36, 1]
             }}
             className="flex flex-col items-center"
